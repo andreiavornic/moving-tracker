@@ -18,8 +18,8 @@ async function bootstrap() {
     .setTitle('Move Tracker')
     .setDescription('Moving-Driven Tracker')
     .setVersion('1.0')
-    // .addTag('health', 'Health check endpoints')
-    // .addTag('metrics', 'Application metrics')
+    .addTag('health', 'Health check endpoints')
+    .addTag('metrics', 'Application metrics')
     .build();
 
   const documentFactory = () =>

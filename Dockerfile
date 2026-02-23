@@ -1,4 +1,4 @@
-# Stage 1: Instalarea dependetenlor + build
+# Stage 1: Install dependencies + build
 FROM node:20-alpine AS build
 WORKDIR /app
 
@@ -7,8 +7,8 @@ RUN npm ci --legacy-peer-deps
 
 COPY . .
 
-RUN npx nest build moving-tracker
-RUN npx nest build worker
+# Build entire monorepo (apps + libs)
+RUN npx nest build
 
 # Stage 2: API runtime
 FROM node:20-alpine AS api

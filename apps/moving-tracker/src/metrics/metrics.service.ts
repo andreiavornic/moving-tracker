@@ -3,9 +3,9 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { InjectQueue } from '@nestjs/bullmq';
 import { Queue } from 'bullmq';
-import { LocationEntity } from '@drivetrack/database';
-import { LOCATION_QUEUE } from '@drivetrack/common';
 import { MetricsResponse } from './dto/metrics-response.dto';
+import { LocationEntity } from 'libs/database/entities';
+import { LOCATION_QUEUE } from 'libs/common';
 
 @Injectable()
 export class MetricsService {

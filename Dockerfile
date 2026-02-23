@@ -18,7 +18,7 @@ COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/package.json ./
 COPY --from=build /app/dist ./dist
 
-CMD ["node", "dist/apps/moving-tracker/main.js"]
+CMD ["node", "dist/apps/moving-tracker/apps/moving-tracker/src/main.js"]
 
 # Stage 3: Worker runtime
 FROM node:20-alpine AS worker
@@ -28,4 +28,4 @@ COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/package.json ./
 COPY --from=build /app/dist ./dist
 
-CMD ["node", "dist/apps/worker/main.js"]
+CMD ["node", "dist/apps/worker/apps/worker/src/main.js"]

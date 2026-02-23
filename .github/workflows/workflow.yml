@@ -79,5 +79,5 @@ jobs:
             sudo docker image prune -f
 
             # Wait and check health
-            sleep 20
+            sleep 60
             curl -f http://localhost:3000/health || echo "Health check failed!"

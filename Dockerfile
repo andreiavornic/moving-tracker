@@ -8,7 +8,7 @@ RUN npm ci --legacy-peer-deps
 COPY . .
 
 # Build entire monorepo (apps + libs)
-RUN npx nest build
+RUN npx nest build moving-tracker && npx nest build worker
 
 # Stage 2: API runtime
 FROM node:20-alpine AS api

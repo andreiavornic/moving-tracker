@@ -14,7 +14,7 @@ import { MetricsModule } from './metrics/metrics.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      ignoreEnvFile: true,
+      envFilePath: ['.env.docker', '.env'],
     }),
     GraphQLModule.forRoot({
       driver: ApolloDriver,

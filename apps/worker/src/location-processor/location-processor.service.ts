@@ -54,8 +54,8 @@ export class LocationProcessorService extends WorkerHost {
       distanceFromPrev = haversineDistance(
         prevLocation.latitude,
         prevLocation.longitude,
-        prevLocation.latitude,
-        prevLocation.longitude,
+        location.latitude,
+        location.longitude,
       );
     }
     const moving = isMoving(location.speed);
